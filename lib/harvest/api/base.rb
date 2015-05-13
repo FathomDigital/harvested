@@ -38,7 +38,6 @@ module Harvest
 
           credentials.set_authentication(httparty_options)
           response = HTTParty.send(method, "#{credentials.host}#{path}", httparty_options)
-          params[:response] = response.inspect.to_s
 
           case response.code
           when 200..201
